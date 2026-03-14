@@ -521,6 +521,12 @@ h2 span {
 }
 
 /* Projects */
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 .project-card {
     display: flex;
     gap: 3rem;
