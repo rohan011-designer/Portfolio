@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react'
 // For a custom domain or root deployment leave base as '/'
 export default defineConfig({
   plugins: [react()],
-  base: '/Portfolio',
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: false,
