@@ -17,7 +17,7 @@ const items = [
       '10+ users tested · 4/5 avg satisfaction',
       '35% reduction in task completion errors',
     ],
-    link: '#',
+    link: 'https://www.behance.net/gallery/241458493/PackPal-A-Smart-Travel-Packing-App-UIUX-Case-Study',
     linkLabel: 'View on Behance ↗',
     confidential: false,
   },
