@@ -96,7 +96,7 @@ function PhotoCube() {
 }
 
 const stats = [
-  { value: '8mo', label: 'Experience' },
+  { value: '9mo', label: 'Experience' },
   { value: '1',   label: 'Research Paper' },
   { value: '4',   label: 'Certifications' },
 ]
