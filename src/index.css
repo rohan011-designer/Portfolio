@@ -1,0 +1,452 @@
+:root {
+  --bg: #f7f9fc;
+  --bg-2: #ffffff;
+  --surface: rgba(255, 255, 255, 0.7);
+  --surface-hover: rgba(255, 255, 255, 0.95);
+  --border: rgba(145, 187, 251, 0.25);
+  --border-hover: rgba(59, 130, 246, 0.45);
+  --accent: #3b82f6;
+  --accent-warm: #ff5c2e;
+  --accent-glow: rgba(59, 130, 246, 0.15);
+  --accent-warm-glow: rgba(255, 92, 46, 0.1);
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --font-heading: 'Archivo', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 0.3s var(--ease);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 2px; }
+
+/* Layout */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+/* Glass */
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Typography */
+.label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--text-primary);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1e293b 30%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: none;
+  transition: var(--transition);
+  text-decoration: none;
+  border: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px var(--accent-glow);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+.btn-outline:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+}
+
+/* Section spacing */
+.section { padding: 4.5rem 0; }
+.section-sm { padding: 3rem 0; }
+
+
+/* ── Skill Glass Cards (Uiverse) ──────────────────────── */
+.skill-glass-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 1rem;
+  padding: 2rem 0 1rem;
+  min-height: 440px;
+}
+
+.skill-glass-container .skill-glass {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  background: linear-gradient(160deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+  border: 1px solid rgba(145, 187, 251, 0.25);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.55s ease;
+  border-radius: 16px;
+  margin: 0 -70px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transform: rotate(calc(var(--r) * 1deg));
+  cursor: none;
+  overflow: hidden;
+}
+
+.skill-glass-container:hover .skill-glass {
+  transform: rotate(0deg);
+  margin: 0 14px;
+}
+
+/* Bottom label strip */
+.skill-glass-container .skill-glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 42px;
+  background: rgba(59, 130, 246, 0.05);
+  border-top: 1px solid rgba(59, 130, 246, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+}
+
+/* No icon SVG override needed */
+.skill-glass-container .skill-glass svg {
+  width: auto;
+  height: auto;
+}
+
+
+/* Responsive Helpers */
+.md-show { display: none !important; }
+@media (min-width: 768px) {
+  .md-show { display: flex !important; }
+}
+
+/* Profile Card Animations */
+.hover-scale {
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+.image-scale {
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.image-container {
+  overflow: hidden;
+  position: relative;
+}
+.image-container:hover .image-scale {
+  transform: scale(1.03);
+}
+.hover-translate {
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-translate:hover {
+  transform: translateX(4px);
+}
+.hover-scale-sm {
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-scale-sm:hover {
+  transform: scale(1.1);
+}
+
+/* DisplayCard CSS stacked deck */
+.display-card-grid {
+  display: grid;
+  grid-template-areas: 'stack';
+  place-items: center;
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+.display-card {
+  grid-area: stack;
+  position: relative;
+  display: flex;
+  height: 9rem; /* 144px */
+  width: 20rem; /* 320px */
+  transform: skewY(8deg);
+  user-select: none;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 14px;
+  border: 1.5px solid var(--border);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1rem 1.25rem;
+  transition: all 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+}
+/* Inactive overlay */
+.display-card.inactive::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: rgba(247, 249, 252, 0.3);
+  transition: opacity 700ms ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.display-card:hover::before {
+  opacity: 0;
+}
+.display-card.active {
+  z-index: 50 !important;
+  background: var(--bg-2);
+}
+.display-card-0 {
+  transform: skewY(8deg) translate(120px, 0px);
+  z-index: 5;
+}
+.display-card-0:hover {
+  transform: skewY(8deg) translate(120px, -12px);
+}
+.display-card-1 {
+  transform: skewY(8deg) translate(90px, 22px);
+  z-index: 4;
+}
+.display-card-1:hover {
+  transform: skewY(8deg) translate(90px, 10px);
+}
+.display-card-2 {
+  transform: skewY(8deg) translate(60px, 44px);
+  z-index: 3;
+}
+.display-card-2:hover {
+  transform: skewY(8deg) translate(60px, 32px);
+}
+.display-card-3 {
+  transform: skewY(8deg) translate(30px, 66px);
+  z-index: 2;
+}
+.display-card-3:hover {
+  transform: skewY(8deg) translate(30px, 54px);
+}
+.display-card-4 {
+  transform: skewY(8deg) translate(0px, 88px);
+  z-index: 1;
+}
+.display-card-4:hover {
+  transform: skewY(8deg) translate(0px, 76px);
+}
+
+/* 3D Folder Stack component styling */
+.folder-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  transition: all 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+.folder-container:hover {
+  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.35);
+  transform: scale(1.04) rotate(-1.5deg);
+}
+.folder-project-card {
+  position: absolute;
+  width: 80px;
+  height: 112px;
+  cursor: pointer;
+  left: -40px;
+  top: -56px;
+  transition: all 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.folder-project-card-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  position: relative;
+  transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.folder-project-card:hover .folder-project-card-inner {
+  transform: translateY(-24px) scale(1.25);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.25);
+  border-color: var(--accent);
+}
+
+/* 3D Book Flip Card Styling */
+.book-card-container {
+  position: relative;
+  width: 200px;
+  height: 275px;
+  background-color: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.01);
+  transition: box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.book-card-container:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.book-cover {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-color: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  z-index: 10;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: left center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+  backface-visibility: hidden;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.book-card-container:hover .book-cover {
+  transform: rotateY(-115deg);
+  box-shadow: -12px 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.book-inside {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  z-index: 1;
+  background: var(--bg-2);
+  border-radius: 14px;
+}
+
+/* Infinite Horizontal Ticker Styling */
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.ticker-track {
+  display: inline-flex;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  gap: 1.25rem;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333333%);
+  }
+}
+
+@keyframes ticker-reverse {
+  0% {
+    transform: translateX(-33.333333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
