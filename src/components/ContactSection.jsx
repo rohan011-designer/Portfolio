@@ -16,7 +16,7 @@ const socials = [
   },
   {
     label: 'Behance',
-    href: 'https://www.behance.net/rohann22,
+    href: 'https://www.behance.net/rohann22',
     target: '_blank',
     color: '#1769ff',
     icon: (
