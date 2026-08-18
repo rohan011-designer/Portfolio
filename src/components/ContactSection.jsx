@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 const socials = [
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/rohan-girase-7102ab256',
+    href: 'https://www.linkedin.com/in/rohann-giirase-7102ab256',
     target: '_blank',
     color: '#0ea5e9',
     icon: (
