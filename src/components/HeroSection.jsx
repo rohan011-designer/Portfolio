@@ -437,7 +437,7 @@ export default function HeroSection() {
                 }}>
                   
                   {/* Floating Figma Cursors */}
-                  <FigmaCursor name="Rohaan (Designer)" color="#3b82f6" x={['120px', '280px', '180px']} y={['280px', '190px', '310px']} delay={0} />
+                  <FigmaCursor name="Rohann (Designer)" color="#3b82f6" x={['120px', '280px', '180px']} y={['280px', '190px', '310px']} delay={0} />
                   <FigmaCursor name="Developer" color="#ff5c2e" x={['440px', '320px', '460px']} y={['110px', '220px', '80px']} delay={1.5} />
 
                   {/* Canvas Content Grid */}
