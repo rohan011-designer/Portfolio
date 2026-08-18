@@ -55,7 +55,7 @@ function ProfileCard() {
               textShadow: '0 2px 8px rgba(0,0,0,0.3)',
               margin: 0,
             }}>
-              Rohaan Girase
+              Rohann Giirase
             </h2>
           </div>
         </div>
@@ -82,7 +82,7 @@ function ProfileCard() {
             </div>
             <div className="hover-translate" style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-                @rohaangirase
+                @rohann_giirase
               </div>
               <div style={{ fontSize: '0.72rem', fontWeight: 500, color: 'var(--text-secondary)' }}>
                 Active now
