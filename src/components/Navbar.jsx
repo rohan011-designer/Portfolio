@@ -55,7 +55,7 @@ export default function Navbar() {
           />
         </div>
         <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1rem', color: 'var(--text-primary)' }}>
-          Rohan Girase
+          Rohaan Girase
         </span>
       </motion.div>
 
