@@ -50,7 +50,7 @@ export default function Navbar() {
         }}>
           <img
             src="/images/profile.jpeg"
-            alt="Rohan Girase"
+            alt="Rohaan Girase"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', filter: 'brightness(0.9)' }}
           />
         </div>
