@@ -24,7 +24,7 @@ function ProfileCard() {
         <div className="image-container" style={{ position: 'relative' }}>
           <img 
             src="/images/about.jpeg"
-            alt="Rohan Girase" 
+            alt="Rohaan Girase" 
             className="image-scale"
             style={{
               width: '100%',
