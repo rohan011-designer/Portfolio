@@ -50,12 +50,12 @@ export default function Navbar() {
         }}>
           <img
             src="/images/profile.jpeg"
-            alt="Rohaan Girase"
+            alt="Rohann Giirase"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', filter: 'brightness(0.9)' }}
           />
         </div>
         <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '1rem', color: 'var(--text-primary)' }}>
-          Rohaan Girase
+          Rohann Giirase
         </span>
       </motion.div>
 
@@ -83,8 +83,8 @@ export default function Navbar() {
       {/* CTA group — Hire Me + Download Resume */}
       <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center' }}>
         <motion.a
-          href="/rohan_girase.pdf"
-          download="Rohan_Girase_Resume.pdf"
+          href="/rohann_giirase.pdf"
+          download="Rohann_Giirase_Resume.pdf"
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.97 }}
           className="btn btn-outline"
