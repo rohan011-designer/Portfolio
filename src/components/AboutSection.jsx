@@ -114,7 +114,7 @@ function ProfileCard() {
 }
 
 const stats = [
-  { value: '9mo', label: 'Experience' },
+  { value: '1Y+', label: 'Experience' },
   { value: '1',   label: 'Research Paper' },
   { value: '4',   label: 'Certifications' },
 ]
