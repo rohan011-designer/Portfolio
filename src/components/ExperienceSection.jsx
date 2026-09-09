@@ -8,8 +8,7 @@ const experiences = [
     period: 'Aug 2026 – Present',
     color: '#4f46e5',
     points: [
-      'Design and help build the company's core product across mobile and desktop, owning the experience from wireframes 
-to final UI',
+      'Design and help build the company core product across mobile and desktop, owning the experience from wireframes to final UI.',
       'Collaborate daily with stakeholders and developers to translate business requirements into clear, user-centered designs, cutting design-to-development handoff time by 25%.',
       'Contribute to front-end development in HTML and CSS, helping bridge design and implementation for key features. ',
       'Maintain a shared component library across mobile and desktop, improving design consistency by 30%.',
