@@ -2,17 +2,17 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    role: 'UI/UX Developer',
+    role: 'UI/UX Designer',
     company: 'ITvia Data Solutions',
     location: 'Pune',
     period: 'Aug 2026 – Present',
     color: '#4f46e5',
     points: [
-      'Improve user satisfaction by 30% by designing and helping build the company\'s core product across mobile and desktop.',
-      'Work daily with stakeholders and developers, cutting design-to-development handoff time by 25%, to turn business needs into working UI.',
-      'Code frontend components in HTML/CSS alongside UI design work, reducing implementation time by 20%.',
-      'Boost feature adoption by 20% through competitor and market analysis that shapes design and feature decisions.',
-      'Maintain a shared design-and-code component library, improving consistency by 30%, across mobile and desktop.',
+      'Design and help build the company's core product across mobile and desktop, owning the experience from wireframes 
+to final UI',
+      'Collaborate daily with stakeholders and developers to translate business requirements into clear, user-centered designs, cutting design-to-development handoff time by 25%.',
+      'Contribute to front-end development in HTML and CSS, helping bridge design and implementation for key features. ',
+      'Maintain a shared component library across mobile and desktop, improving design consistency by 30%.',
     ],
   },
   {
